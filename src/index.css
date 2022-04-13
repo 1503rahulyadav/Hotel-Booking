@@ -1,0 +1,263 @@
+body {
+      background-color:white;
+      /* visibility: hidden; */
+
+
+}
+/* css of Navbar components */
+.navbar{
+  margin: 3rem 10rem 0rem 10rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  opacity: 0.9;
+  position: sticky;
+  top: 0rem;
+  z-index: 1;
+}
+.navbar-brand{
+  color: #26b1a4 !important;
+}
+.book-btn{
+  color: #26b1a4;
+  border-color : #26b1a4;
+  border-radius: 8px;
+  width: 8rem;
+  height: 3rem;
+}
+.book-btn:hover{
+  background-color: #26b1a4;
+  color: white;
+}
+
+
+/* home page css */
+/* .main-container{
+  margin-top: -10rem;
+  border-radius: 2rem !important;
+} */
+.first-row{
+  margin-top: -10rem;
+  /* visibility: hidden; */
+}
+.content-col{
+  background-color: #26b1a4;
+  padding: 0px;
+ 
+}
+.image-col{
+  padding: 0%;
+}
+.col-image{
+  width: 100%;
+}
+.content-col-heading{
+  
+  margin: 13rem 0rem 0rem 16rem;
+  word-wrap: break-word;
+
+}
+.content-col-para{
+  margin: 1rem 3rem 0rem 16rem;
+}
+.check-information{
+  width: 66%;
+  position: relative;
+  bottom: 3rem;
+  background-color: white;
+  height: 6rem;
+  padding-top: 20px;
+  border-radius: 1rem;
+  margin-left: 12rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.check-heading{
+  color: rgb(191, 191, 202);
+}
+.location-dropdown{
+  border: none;
+}
+.check-input{
+  width: 142px !important;
+  border: none !important;
+}
+.check-btn{
+  margin: 6px 0rem 0rem 58px;
+  height: 3rem;
+  border-radius: 8px;
+  border-color: #26b1a4;
+  background-color: #26b1a4;
+  color: white;
+  font-size: 18px;
+}
+.check-btn:hover{
+  background-color: #26b1a4;
+  border-color: #26b1a4;
+}
+.pool-image{
+  width: 100%;
+  border-radius: 1rem;
+}
+.pool-side-content{
+  padding: 5rem 0rem 0rem 6rem;
+}
+.continue-btn{
+  /* margin: 6px 0rem 0rem 58px; */
+  /* height: 3rem; */
+  border-radius: 8px;
+  border-color: #26b1a4;
+  background-color: #26b1a4;
+  color: white;
+  font-size: 18px;
+}
+.continue-btn:hover{
+  border-color: #26b1a4;
+  background-color: #26b1a4;
+}
+ i{
+  font-weight: 600;
+}
+.services-content{
+  padding: 11rem 0rem 0rem 0rem;
+}
+/* .lottie-col{
+  padding: -1rem 5rem;
+} */
+.lottie-animation-services{
+  width: 100%;
+  margin: 7rem 0rem 5rem 0rem;
+}
+/* .bellhop-image{
+  width: 100%;
+  margin: 3rem 0rem 0rem 0rem;
+} */
+ .card{
+  text-align: center  !important;
+  border-radius: 1rem ;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  margin: 3rem 0rem 4rem 0rem ;
+  border: 0px;
+  transform: translateY(-30px);
+}
+.card-image{
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+.package-btn {
+    width: 14rem;
+    margin: 3px 0px 2rem 6rem;
+    border: none;
+}
+.package-main-heading{
+  text-align: center;
+}
+.package-para{
+  text-align: center;
+  padding: 1rem 20rem 0rem 20rem;
+}
+.livingroom1{
+  width: 100%;
+  border-radius: 1rem;
+}
+.livingroom2{
+  width: 100%;
+  border-radius: 1rem;
+}
+.blog-col-row{
+  padding: 2rem 4rem 0rem;
+}
+.blog-main-heading{
+  text-align: center;
+}
+.blog-main-para{
+  text-align: center;
+  padding: 1rem 20rem 0rem 20rem;
+}
+.blog-content-row{
+  margin: 2rem 0rem;
+}
+.creator-icon{
+  background-color: blueviolet;
+  border-radius: 22px;
+  width: 18%;
+  height: 18%;
+  margin-right: 1rem;
+}
+.date-icon{
+  background-color: cadetblue;
+  width: 23%;
+  height: 0%;
+  border-radius: 34px;
+  margin-right: 1rem;
+}
+.footer-container{
+  background-color: #e6fdfa;
+  margin-top: 5rem;
+ 
+}
+.footer{
+  padding: 5rem 5rem 0rem 5rem; 
+}
+.subs-btn{
+  background-color: #26b1a4;
+  border: none;
+  color: white;
+  font-weight: 400;
+}
+.subs-btn:hover{
+  background-color: #26b1a4;
+  color: white;
+}
+
+/* login page css start from here */
+
+body{
+  text-align: center !important;
+}
+.form-signin{
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+/* media query css start from here */
+
+@media  (max-width:992px) {
+         
+  
+    .navbar{
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 1rem;
+      opacity: 1;
+    }
+    .content-col-heading{
+      margin: 10rem 0rem 0rem 5rem;
+    }
+    .content-col-para{
+      margin: 1rem 0rem 2rem 3rem !important;
+    }
+    .check-information{
+      margin-left: 1rem;
+      width: 90%;
+      height: 100%;
+      padding-bottom: 1rem;
+    }
+    .check-btn{
+      margin: 6px 0rem 0rem 40px;
+      width: 155%;
+     
+    }
+    .pool-side-content{
+      padding: 1rem;
+    }
+    
+    
+}
