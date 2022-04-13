@@ -13,7 +13,7 @@ function login() {
                             animationData={Login}
                             loop={true}
                         />
-                        <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+                        <h1 className="h3 mb-3 fw-normal">Please fill the form</h1>
 
                         <div className="form-floating">
                         <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
