@@ -18,18 +18,17 @@ import { Button } from 'react-bootstrap';
 import {GeoAlt,Person,Calendar2Check } from 'react-bootstrap-icons';
 
 
-function PackageCard(){
+function PackageCard({item}){
    
     return(
         <>
              <Card  className='card'>
-                 <img src={classic} alt=""  className='classic-room-image card-image'/>                            
-                 <h4>Classic Room </h4>
-                 <h2>$150</h2>
-                 <p>free wifi </p>
-                 <p>breakfast</p>
-                 <p>1 beds in room</p>
-                 <p>2 people in room</p>
+                 <img src={item.image} alt=""  className='classic-room-image card-image'/>                            
+                 <h4>{item.heading}</h4>
+                 <h2>{item.price}</h2>
+                 {item?.data?.map((item,key)=>(
+                     <p>{item.data[key]}</p>
+                 ))}
                 <Button variant="outline-success" className='package-btn'>select Package</Button>                                                     
         </Card>
         </>
@@ -195,42 +194,6 @@ function Home (){
      
     }, []);
      
-    // const [data, setData] = useState([
-    //     {
-    //         image:classic,
-    //         heading:'Classic Room',
-    //         price:'$150',
-    //         data:[
-    //             'free wifi',
-    //             'breakfast',
-    //             '1 bed in room',
-    //             '2 people in room'
-    //         ]
-    //     },
-    //     {
-    //         image:luxury,
-    //         heading:'Luxury Room',
-    //         price:'$200',
-    //         data:[
-    //             'free wifi',
-    //             'breakfast',
-    //             '2 beds in room',
-    //             '4 people in room'
-    //         ]
-    //     },
-    //     {
-    //         image:modern,
-    //         heading:'Modern Room',
-    //         price:'$175',
-    //         data:[
-    //             'free wifi',
-    //             'breakfast',
-    //             '1 bed in room',
-    //             '2 people in room'
-    //         ]
-    //     },
-       
-    // ])
     
     return(
         <>
@@ -313,9 +276,9 @@ function Home (){
                                 <Row className='packages-row'>
                                     <h1 className='package-main-heading'>Choose Best Package</h1>
                                     <p className='package-para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quasi incidunt, fuga debitis et repudiandae dolor laudantium accusamus totam veritatis!</p>
-                                    {data.map((_, index) =>(
+                                    {data.map((item, index) =>(
                                         <Col md={4} xs={12}>
-                                        <PackageCard/>
+                                        <PackageCard item={item}/>
                                      </Col>
                                     ))}
                                     {/* <Col md={4} xs={12}>
