@@ -1,6 +1,5 @@
 import React from 'react'
 import { Navbar,Nav,Form,Container,Button } from 'react-bootstrap'
-import { gsap } from "gsap";
 
 function Homenavbar(){
     return(

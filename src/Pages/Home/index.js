@@ -1,63 +1,91 @@
-import React from 'react'
+import React from 'react';
 import { gsap } from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
-// import {TweenMax} from 'gsap';
-
-import {useEffect , useRef} from 'react';
-import { Card, Container } from 'react-bootstrap'
+import {useEffect , useRef,useState} from 'react';
+import { Card, Container } from 'react-bootstrap';
 import Lottie from "lottie-react";
-import Anda from "../../Assets/anda.json" 
-import Services from "../../Assets/service.json" 
-import Wave from "../../Assets/layer.json" 
-// import "~slick-carousel/slick/slick.css"; 
-// import "~slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import { Row,Col } from 'react-bootstrap'
-import Navbar from '../../Components/Navbar'
-import image1 from '../../Assets/image1.png'
-import poolside from '../../Assets/poolside.jpg'
-import bellhop from '../../Assets/bellhop-removebg.png'
-import classic from '../../Assets/classic-room.jpg'
-import luxury from '../../Assets/luxury-room.jpg'
-import modern from '../../Assets/modern-room.jpg'
-import livingroom1 from '../../Assets/living-room-image1.jpeg'
-import livingroom2 from '../../Assets/living-room-image2.jpeg'
-
-import { Button } from 'react-bootstrap'
+import Services from "../../Assets/service.json"; 
+import { Row,Col } from 'react-bootstrap';
+import Navbar from '../../Components/Navbar';
+import image1 from '../../Assets/image1.png';
+import poolside from '../../Assets/poolside.jpg';
+import classic from '../../Assets/classic-room.jpg';
+import luxury from '../../Assets/luxury-room.jpg';
+import modern from '../../Assets/modern-room.jpg';
+import livingroom1 from '../../Assets/living-room-image1.jpeg';
+import livingroom2 from '../../Assets/living-room-image2.jpeg';
+import { Button } from 'react-bootstrap';
 import {GeoAlt,Person,Calendar2Check } from 'react-bootstrap-icons';
 
 
+function PackageCard(){
+   
+    return(
+        <>
+             <Card  className='card'>
+                 <img src={classic} alt=""  className='classic-room-image card-image'/>                            
+                 <h4>Classic Room </h4>
+                 <h2>$150</h2>
+                 <p>free wifi </p>
+                 <p>breakfast</p>
+                 <p>1 beds in room</p>
+                 <p>2 people in room</p>
+                <Button variant="outline-success" className='package-btn'>select Package</Button>                                                     
+        </Card>
+        </>
+    )
+}
 
 function Home (){
 
-    // const ref1 = useRef(null);
-    // useEffect = (()=>{
-    //     const element = ref1.current;
-    //     let section = gsap.timeline({
-    //         scrollTrigger:{
-    //             trigger:".card",
-    //             start:"top",
-    //             end:"buttom",
-    //             scrub: true ,
-    //             pin: true,
-    //             duration: 2000 
-    //         },
-    //     });
-
-    // }, []);
-    let nav = useRef(null);
+    const [data, setData] = useState([
+        {
+            image:classic,
+            heading:'Classic Room',
+            price:'$150',
+            data:[
+                'free wifi',
+                'breakfast',
+                '1 bed in room',
+                '2 people in room'
+            ]
+        },
+        {
+            image:luxury,
+            heading:'Luxury Room',
+            price:'$200',
+            data:[
+                'free wifi',
+                'breakfast',
+                '2 beds in room',
+                '4 people in room'
+            ]
+        },
+        {
+            image:modern,
+            heading:'Modern Room',
+            price:'$175',
+            data:[
+                'free wifi',
+                'breakfast',
+                '1 bed in room',
+                '2 people in room'
+            ]
+        },
+       
+    ])
+    
+    
     let imageCol = useRef(null);
     let image = useRef(null);
     var content= useRef();
-    // let mainRow = useRef(null);
-    // let tl = gsap.timeline();
+   
 
     useEffect(()=>{
         gsap.timeline().from(".first-row",{duration:1,visibility:'hidden'})
             .to(".first-row", { visibility:'visible'})
             .from(".content-col", {duration: 1,x:-1000}) 
-            .from(".image-col", {x:1200,duration: 1,opacity:.5},"<") 
-            // .from(".nav",{opacity:0.5, visibility:'hidden'})      
+            .from(".image-col", {x:1200,duration: 1,opacity:.5},"<")      
             .from(content.current,{
                     duration:1, 
                     autoAlpha:0,
@@ -166,7 +194,43 @@ function Home (){
 
      
     }, []);
-    
+     
+    // const [data, setData] = useState([
+    //     {
+    //         image:classic,
+    //         heading:'Classic Room',
+    //         price:'$150',
+    //         data:[
+    //             'free wifi',
+    //             'breakfast',
+    //             '1 bed in room',
+    //             '2 people in room'
+    //         ]
+    //     },
+    //     {
+    //         image:luxury,
+    //         heading:'Luxury Room',
+    //         price:'$200',
+    //         data:[
+    //             'free wifi',
+    //             'breakfast',
+    //             '2 beds in room',
+    //             '4 people in room'
+    //         ]
+    //     },
+    //     {
+    //         image:modern,
+    //         heading:'Modern Room',
+    //         price:'$175',
+    //         data:[
+    //             'free wifi',
+    //             'breakfast',
+    //             '1 bed in room',
+    //             '2 people in room'
+    //         ]
+    //     },
+       
+    // ])
     
     return(
         <>
@@ -249,42 +313,20 @@ function Home (){
                                 <Row className='packages-row'>
                                     <h1 className='package-main-heading'>Choose Best Package</h1>
                                     <p className='package-para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quasi incidunt, fuga debitis et repudiandae dolor laudantium accusamus totam veritatis!</p>
-                                    <Col md={4} xs={12}>
-                                        <Card  className='card'>
-                                            <img src={classic} alt=""  className='classic-room-image card-image'/>
-                                            <h4>Classic Room </h4>
-                                            <h2>$150</h2>
-                                            <p>free wifi </p>
-                                            <p>breakfast</p>
-                                            <p>1 beds in room</p>
-                                            <p>2 people in room</p>
-                                            <Button variant="outline-success" className='package-btn'>select Package</Button>
-                                        </Card>
+                                    {data.map((_, index) =>(
+                                        <Col md={4} xs={12}>
+                                        <PackageCard/>
+                                     </Col>
+                                    ))}
+                                    {/* <Col md={4} xs={12}>
+                                        <PackageCard/>
                                     </Col>
                                     <Col md={4} xs={12}>
-                                        <Card className='card'>
-                                            <img src={luxury} alt=""  className='luxury-room-image card-image'/> 
-                                            <h4>Luxury Room </h4>
-                                            <h2>$200</h2>
-                                            <p>free wifi </p>
-                                            <p>breakfast</p>
-                                            <p>2 beds in room</p>
-                                            <p>4 people in room</p>
-                                            <Button variant="outline-success" className='package-btn'>select Package</Button> 
-                                        </Card>
+                                    <PackageCard/>
                                     </Col>
                                     <Col md={4} xs={12}>
-                                        <Card className='card'>
-                                            <img src={modern} alt=""  className='modern-room-image card-image'/>
-                                            <h4>Modern Room </h4>
-                                            <h2>$175</h2>
-                                            <p>free wifi </p>
-                                            <p>breakfast</p>
-                                            <p>1 beds in room</p>
-                                            <p>2 people in room</p>
-                                            <Button variant="outline-success" className='package-btn'>select Package</Button>  
-                                        </Card>
-                                    </Col>  
+                                    <PackageCard/>
+                                    </Col>   */}
                                 </Row>
                                 <Row className='blogs-section-row'>
                                     <h1 className='blog-main-heading'>Our latest Blogs & News</h1>
