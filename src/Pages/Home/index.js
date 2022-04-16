@@ -26,8 +26,8 @@ function PackageCard({item}){
                  <img src={item.image} alt=""  className='classic-room-image card-image'/>                            
                  <h4>{item.heading}</h4>
                  <h2>{item.price}</h2>
-                 {item?.data?.map((item,key)=>(
-                     <p>{item.data[key]}</p>
+                 {item?.data?.map((feature)=>(
+                     <p>{feature}</p>
                  ))}
                 <Button variant="outline-success" className='package-btn'>select Package</Button>                                                     
         </Card>
