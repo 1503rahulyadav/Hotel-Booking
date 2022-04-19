@@ -244,6 +244,7 @@ body {
          
     .body{
       overflow-x: hidden !important;
+      
     }
     .navbar{
       margin: 1rem;
@@ -279,7 +280,7 @@ body {
       padding: 0rem;
     }
     .package-btn{
-      margin: 3px 0px 2rem 3rem;
+      margin: 3px 0px 2rem 2rem;
       background-color: #26b1a4;
       color: white;
 
@@ -305,6 +306,10 @@ body {
     .service-row{
         /* display: flex; */
         flex-direction: column-reverse;
+        overflow-x: hidden;
+    }
+    .footer-row{
+      margin: 0rem;
     }
  
 }

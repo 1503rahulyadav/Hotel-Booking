@@ -322,10 +322,10 @@ function Home (){
                             
                 </Container>
         </Container>
-        <Row>
+        <Row className='footer-row' >
                                 <div className="container footer-container">
                                         <footer className=" footer ">
-                                            <div className="row">
+                                            <div className="row ">
                                             <div className="col-lg-2 col-sm-12">
                                                 <h5>Section</h5>
                                                 <ul className="nav flex-column">
