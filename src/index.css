@@ -147,6 +147,10 @@ body {
     margin: 3px 0px 2rem 6rem;
     border: none;
 }
+.package-btn:hover {
+  background-color: #26b1a4;
+  color: white;
+}
 .package-main-heading{
   text-align: center;
 }
@@ -184,10 +188,11 @@ body {
 }
 .date-icon{
   background-color: cadetblue;
-  width: 23%;
+  width: 19%;
   height: 0%;
   border-radius: 34px;
   margin-right: 1rem;
+  padding: 2px;
 }
 .footer-container{
   background-color: #e6fdfa;
@@ -202,6 +207,7 @@ body {
   border: none;
   color: white;
   font-weight: 400;
+  height: 50%;
 }
 .subs-btn:hover{
   background-color: #26b1a4;
@@ -221,7 +227,9 @@ body {
 .form-control{
   margin-bottom: 28px;
 }
-
+/* .spline-animation{
+  width: 50%;
+} */
 
 
 
@@ -234,7 +242,9 @@ body {
 
 @media  (max-width:992px) {
          
-  
+    .body{
+      overflow-x: hidden !important;
+    }
     .navbar{
       margin: 1rem;
       padding: 1rem;
@@ -261,6 +271,40 @@ body {
     .pool-side-content{
       padding: 1rem;
     }
-    
-    
+    .services-content{
+      padding: 0rem ;
+      margin-bottom: 3rem;
+    }
+    .package-para{
+      padding: 0rem;
+    }
+    .package-btn{
+      margin: 3px 0px 2rem 3rem;
+      background-color: #26b1a4;
+      color: white;
+
+    }
+    .blog-col-row{
+      padding: 0rem;
+    }
+    .blog-main-para{
+      padding: 0rem;
+    }
+  
+    .date-icon{
+      margin-right: 5px;
+      padding: 0rem;
+    }
+    .creator-icon{
+      margin-right: 5px;
+    }
+    .offset-1{
+      margin: 0px;
+      padding: 0px;
+    }
+    .service-row{
+        /* display: flex; */
+        flex-direction: column-reverse;
+    }
+ 
 }

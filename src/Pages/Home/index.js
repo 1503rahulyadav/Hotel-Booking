@@ -78,7 +78,8 @@ function Home (){
     let imageCol = useRef(null);
     let image = useRef(null);
     var content= useRef();
-   
+
+//    gsap animation starts from here
 
     useEffect(()=>{
         gsap.timeline().from(".first-row",{duration:1,visibility:'hidden'})
@@ -194,6 +195,7 @@ function Home (){
      
     }, []);
      
+    // gsap animation ends here
     
     return(
         <>
@@ -311,7 +313,7 @@ function Home (){
                                                 <Col><h5><Calendar2Check className=' btn date-icon' />Calender</h5></Col>
                                                 <Col><h5><Person className='creator-icon'/>By creators</h5></Col>
                                             </Row>
-                                            <h4 className='blog-col-heading'>Villas in Nashik that are nothing less<br/> than home way from home.</h4><br/>
+                                            <h4 className='blog-col-heading'>Villas in Nashik that are nothing less than home way from home.</h4><br/>
                                             <p className='blog-col-para'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, eligendi magnam explicabo libero consequatur velit nobis ipsa excepturi, iste, a quia molestiae minus. At aspernatur consequatur mollitia aperiam nisi labore sunt quod delectus laudantium odit! Rem ullam sequi iure ut! Dignissimos minus quis illo cupiditate quas atque alias dolores cum!</p>
                                         </Col>
                                     </Row>
@@ -324,7 +326,7 @@ function Home (){
                                 <div className="container footer-container">
                                         <footer className=" footer ">
                                             <div className="row">
-                                            <div className="col-2">
+                                            <div className="col-lg-2 col-sm-12">
                                                 <h5>Section</h5>
                                                 <ul className="nav flex-column">
                                                 <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
@@ -335,7 +337,7 @@ function Home (){
                                                 </ul>
                                             </div>
 
-                                            <div className="col-2">
+                                            <div className="col-lg-2 col-sm-12">
                                                 <h5>Section</h5>
                                                 <ul className="nav flex-column">
                                                 <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
@@ -346,7 +348,7 @@ function Home (){
                                                 </ul>
                                             </div>
 
-                                            <div className="col-2">
+                                            <div className="col-lg-2 col-sm-12">
                                                 <h5>Section</h5>
                                                 <ul className="nav flex-column">
                                                 <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
@@ -357,7 +359,7 @@ function Home (){
                                                 </ul>
                                             </div>
 
-                                            <div className="col-4 offset-1">
+                                            <div className="col-lg-3 offset-1 col-sm-12">
                                                 <form>
                                                 <h5>Subscribe to our newsletter</h5>
                                                 <p>Monthly digest of whats new and exciting from us.</p>
@@ -370,13 +372,13 @@ function Home (){
                                             </div>
                                             </div>
 
-                                            <div className="d-flex justify-content-between py-4 my-4 border-top">
+                                            <div className=" justify-content-between py-4 my-4 border-top">
                                             <p>© 2021 Company, Inc. All rights reserved.</p>
-                                            <ul className="list-unstyled d-flex">
+                                            {/* <ul className="list-unstyled d-flex">
                                                 <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"></svg></a></li>
                                                 <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"></svg></a></li>
                                                 <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"></svg></a></li>
-                                            </ul>
+                                            </ul> */}
                                             </div>
                                            
                                         </footer>
